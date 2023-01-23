@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    height: 100vh;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+    height: 100%;
+}
+
+.bg-main-desktop {
+    background-image: url('../images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: 100%;
+    align-items: center;
+
+}
+
+.card-front {
+    background-image: url('../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    height: inherit;
+    display: flex;
+    width: inherit;
+    align-items: center;
+}
+
+.card-back {
+    background-image: url('../images/bg-card-back.png');
+    background-repeat: no-repeat;
+    height: inherit;
+    width: inherit;
+}
