@@ -3,6 +3,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
+    /* font-size: 18px; */
 }
 
 .bg-main-desktop {
@@ -16,32 +17,29 @@ body {
     margin: 0 auto;
     height: 80%;
 }
-/* .card {
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    width: 100%;
-    align-items: center;
 
-} */
+.card-front, .card-back {
+    background-repeat: no-repeat;
+    padding: 0;
+    background-size: inherit;
+    width: 27.9375em;
+    height: 15.3125em;
+    padding: 2.5em;
+}
 
 .card-front {
     background-image: url('../images/bg-card-front.png');
-    background-repeat: no-repeat;
-    background-size: inherit;
-    padding: 0;
-    width: 27.9375em;
-    height: 15.3125em;
-    margin-right: 10em;
+    margin-right: 15em;
+}
+
+.bi-circle {
+    color: #C9B6CC;
 }
 
 .card-back {
     background-image: url('../images/bg-card-back.png');
-    background-repeat: no-repeat;
-    background-size: inherit;
-    padding: 0;
-    width: 27.9375em;
-    height: 15.3125em;
+    margin-left: -8em;
+    margin-top: 2.31em;
 }
 
 #dataCard {
@@ -52,8 +50,16 @@ form {
     padding: 5em;
 }
 
+#inputExpDate {
+    width: 45%;
+}
+
+input::placeholder {
+    color: #686868 !important;
+}
+
 button {
-    background-color: #1B0726 !important;
-    padding: 0.3em;
+    background-color: #220930 !important;
+    padding: 0.5em 0 !important;
     color: #FFF !important;
 }
