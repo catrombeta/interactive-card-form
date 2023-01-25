@@ -24,7 +24,7 @@ body {
     background-size: inherit;
     width: 27.9375em;
     height: 15.3125em;
-    padding: 2.5em;
+    padding: 2.2em;
 }
 
 .card-front {
@@ -50,16 +50,39 @@ form {
     padding: 5em;
 }
 
-#inputExpDate {
+#inputExpDateM, #inputExpDateY {
     width: 45%;
 }
 
 input::placeholder {
     color: #686868 !important;
 }
+    
+
+.form-control:focus {
+    border: 2px solid linear-gradient(to left, #6448fe, #600594) !important;
+    box-shadow: 0 0 0 0 !important;
+}
 
 button {
     background-color: #220930 !important;
     padding: 0.5em 0 !important;
     color: #FFF !important;
+}
+
+/* FILL'S DATA */
+
+#fill-number {
+    font-size: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#fill-cvc, #fill-number, #fill-name, #fill-date-month, #fill-date-year, span {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+#fill-cvc {
+    margin-right: 1em;
 }
