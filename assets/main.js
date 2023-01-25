@@ -21,6 +21,8 @@ function fillDataCard() {
     const inputs = [inputName, inputNumber, inputExpDateM, inputExpDateY, inputCardCvc];
     const divFills = [divFillName, divFillNumber, divFillExpDateM, divFillExpDateY, divFillCardCvc];
 
+    const buttonSubmit = document.getElementById('submit-form');
+
 
     inputs.forEach((input, i) => {
         input.addEventListener('input', function() {
@@ -30,7 +32,7 @@ function fillDataCard() {
                     this.value = '';
                 }
             } else if(input === inputNumber || input === inputExpDateM || input === inputExpDateY || input === inputCardCvc){
-                if(isNaN(this.value)) {
+                if(isNaN(this.value.replace(/\s/g,''))) {
                     alert('Please enter a valid number');
                     this.value = '';
                 }
@@ -41,14 +43,19 @@ function fillDataCard() {
     });
 
 
+    // FORM VALIDATION 
+    
+    function validateDataForm() {
+        inputName.addEventListener('input', function () {
+            let value = inputNumber.value;
+            if (value.length == 19) {
+                return true;
+            } else {
+                alert('Please enter a valid number');
+            }
+        })
+    }
+
+
 }
 fillDataCard();
-
-function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-    }
-    return true;
-}
